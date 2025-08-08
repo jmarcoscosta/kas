@@ -105,6 +105,7 @@ class Clean():
         Clear the contents of a directory without removing the dir itself.
         """
         for item in directory.iterdir():
+            logging.info(f'Removing {item}')
             if item.is_dir():
                 shutil.rmtree(item)
             else:
